@@ -1,2 +1,2 @@
-# Community-Library-Template
-Template for various components of community library.
+# Community-Library-Frontend
+React frontend of community library project.
