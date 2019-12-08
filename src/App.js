@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Login from './pages/Login/Login';
+import SignUp from './pages/SignUp/SignUp';
+import Navbar from './shared/components/Navbar/Navbar';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+let onLogin = () => {
+  alert('login clicked')
+}
+let onSignup = () => {
+  alert('sign up clicked')
+}
+
+let onFacebookLogin = () => {
+  alert('facebook login clicked')
+}
+let onFacebookSignup = () => {
+  alert('facebook sign up clicked')
+}
+
+let onGoogleLogin = () => {
+  alert('google login clicked')
+}
+let onGoogleSignup = () => {
+  alert('google sign up clicked')
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <div className="main">
+          <Navbar />
+          <div className="content">
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={SignUp} />
+          </div>
+        </div>
+      </Router>
+    </>
   );
 }
 
