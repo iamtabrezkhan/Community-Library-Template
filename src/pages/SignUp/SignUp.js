@@ -8,11 +8,19 @@ const SignUp = props => {
 	};
 
 	const onFacebookSignup = () => {
-		alert("facebook signup cliked!");
+		console.log("TEST CLICK");
+		window.open(
+			"http://localhost:5000/api/v1/passportAuth/auth/facebook",
+			"_self"
+		);
 	};
 
 	const onGoogleSignup = () => {
-		alert("google signup cliked!");
+		console.log("google login cliked!");
+		window.open(
+			"http://localhost:5000/api/v1/passportAuth/auth/google",
+			"_self"
+		);
 	};
 	return (
 		<div className={Classes.main}>
