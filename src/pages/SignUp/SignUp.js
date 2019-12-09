@@ -4,7 +4,7 @@ import Form from "../../shared/components/Form/Form";
 
 const SignUp = props => {
 	const onSignup = () => {
-		alert("signup cliked!");
+		alert("signup cliked");
 	};
 
 	const onFacebookSignup = () => {
