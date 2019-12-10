@@ -6,7 +6,9 @@ const Navbar = () => {
 	return (
 		<div className={Classes.main}>
 			<div className={Classes.wrapper}>
-				<div className={Classes.logo}>Community Library Test</div>
+				<div className={Classes.logo}>
+					<Link to="/">Community Library Test</Link>
+				</div>
 				<div className={Classes.menu}>
 					<ul>
 						<li>
