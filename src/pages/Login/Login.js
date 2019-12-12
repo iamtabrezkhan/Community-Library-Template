@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import Classes from "./Login.module.css";
 import Form from "../../shared/components/Form/Form";
-import axios from "axios";
-const Login = props => {
-	const onLogin = () => {
-		alert("login cliked!");
+import { connect } from "react-redux";
+import { signIn } from "../../actions/auth";
+import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
+const Login = ({ props, signIn, isAuthenticated }) => {
+	const onLogin = (e, formData) => {
+		e.preventDefault();
+		signIn(formData);
 	};
 
 	const onFacebookLogin = () => {
@@ -22,7 +26,11 @@ const Login = props => {
 			"_self"
 		);
 	};
+	//Redirect if logged in
 
+	if (isAuthenticated) {
+		return <Redirect to="/dashboard" />;
+	}
 	return (
 		<div className={Classes.main}>
 			<Form
@@ -35,5 +43,13 @@ const Login = props => {
 		</div>
 	);
 };
+Login.propTypes = {
+	signIn: PropTypes.func.isRequired,
+	isAuthenticated: PropTypes.bool
+};
 
-export default Login;
+const mapStateToProps = state => ({
+	isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { signIn })(Login);

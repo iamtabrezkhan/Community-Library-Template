@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment, useState } from "react";
 import Classes from "./Form.module.css";
 import { Link } from "react-router-dom";
 
@@ -66,6 +66,16 @@ let SignupSocialBtns = props => {
 };
 
 const Form = props => {
+	const [formData, setFormData] = useState({
+		email: "",
+		password: ""
+	});
+
+	const onChange = e => {
+		e.preventDefault();
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
 	return (
 		<div className={Classes.main}>
 			<div className={Classes.wrapper}>
@@ -74,8 +84,20 @@ const Form = props => {
 				</div>
 				<div className={Classes.form}>
 					<form>
-						<input type="text" placeholder="Email or Phone" />
-						<input type="password" placeholder="Password" />
+						<input
+							type="text"
+							placeholder="Email or Phone"
+							name="email"
+							defaultValue={formData.name}
+							onChange={e => onChange(e)}
+						/>
+						<input
+							type="password"
+							placeholder="Password"
+							name="password"
+							defaultValue={formData.password}
+							onChange={e => onChange(e)}
+						/>
 						<small>
 							<a href="#">Forgot password?</a>
 						</small>
@@ -83,14 +105,18 @@ const Form = props => {
 					<div className={Classes.btnContainer}>
 						{props.type === "login" ? (
 							<button
-								onClick={props.onLogin}
+								onClick={e => {
+									props.onLogin(e, formData);
+								}}
 								className={`btn ${Classes.loginBtn}`}
 							>
 								Login
 							</button>
 						) : (
 							<button
-								onClick={props.onSignup}
+								onClick={e => {
+									props.onSignup(e, formData);
+								}}
 								className={`btn ${Classes.loginBtn}`}
 							>
 								Sign Up

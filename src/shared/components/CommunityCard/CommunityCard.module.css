@@ -16,3 +16,38 @@
 .card:hover {
 	box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
+
+.members {
+	/* border-bottom: 1px solid black; */
+	display: flex;
+	justify-content: space-between;
+	margin-top: auto;
+	padding: 2vh;
+
+	/* justify-self: flex-end; */
+	/* justify-self: flex-start; */
+	/* align-items: flex-end; */
+}
+.members button {
+	background: none;
+	border: 1px solid #17a2b8;
+	border-radius: 10px;
+	color: #17a2b8;
+	padding: 2vh;
+	font-size: 2vh;
+	font-weight: bold;
+}
+.members button:focus {
+	outline: none;
+}
+
+.members button:hover {
+	cursor: pointer;
+	background: #17a2b8;
+	color: white;
+}
+
+.card h2 {
+	padding-left: 2vh;
+	font-weight: normal;
+}
