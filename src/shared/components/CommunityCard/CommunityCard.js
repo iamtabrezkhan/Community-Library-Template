@@ -18,6 +18,12 @@ const CommunityCard = ({community}) => {
 				{
 					!community.imgSrc ? <div className={Classes.dummyImg}>{community.name[0].toUpperCase()}{community.name[1].toUpperCase()}</div> : null
 				}
+				{
+					!community.imgSrc ? <div className={`${Classes.glass} ${Classes.glass1}`}></div> : null
+				}
+				{
+					!community.imgSrc ? <div className={`${Classes.glass} ${Classes.glass2}`}></div> : null
+				}
 			</div>
 			<div className={Classes.body}>
 				<div className={Classes.name}>

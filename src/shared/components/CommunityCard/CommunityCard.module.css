@@ -23,6 +23,26 @@
 	color: white;
 	font-size: 2rem;
 	letter-spacing: 2px;
+	overflow: hidden;
+}
+
+.main .img .glass {
+	position: absolute;
+	height: 100%;
+	z-index: 2;
+	transform: skewX(50deg);
+}
+
+.main .img .glass1 {
+	width: 200%;
+	left: -50%;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.main .img .glass2 {
+	left: 50%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .main .body {
