@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Banner from "../../shared/components/Banner/Banner";
 import CommunitiesList from "../../shared/components/CommunitiesList/CommunitiesList";
 import CommunityCard from '../../shared/components/CommunityCard/CommunityCard';
+import CommunityCardShimmer from "../../shared/components/CommunityCardShimmer/CommunityCardShimmer";
 
 const communities = [
 	{
@@ -50,6 +51,9 @@ const Landing = () => {
 														<CommunityCard community={community} />
 													</div>)
 					}
+					<div className={Classes.cardContainer}>
+						<CommunityCardShimmer />
+					</div>
 				</div>
 			</div>
 		</div>

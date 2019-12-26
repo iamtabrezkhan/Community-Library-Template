@@ -1,0 +1,92 @@
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+.main {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 1000px 104px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+	box-shadow: 1px 1px 6px -3px rgba(0, 0, 0, 0.2);
+}
+
+.mask {
+    position: absolute;
+    background: white;
+}
+
+.middleMask {
+    width: 100%;
+    left: 0;
+    top: 150px;
+    height: 20px;
+}
+
+.middleMask2 {
+    width: 100%;
+    left: 0;
+    top: 190px;
+    height: 10px;
+}
+
+.middleRight {
+    width: 20%;
+    right: 0;
+    top: 150px;
+    height: 40px;
+}
+
+.middleRight2 {
+    width: 40%;
+    right: 0;
+    top: 190px;
+    height: 40px;
+}
+
+.middleRight2 {
+    width: 60%;
+    right: 0;
+    top: 230px;
+    height: 30px;
+}
+
+.bottomMask {
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+}
+
+.bottomMask2 {
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    height: 10px;
+}
+
+.left {
+    width: 15px;
+    left: 0;
+    top: 150px;
+    height: 100px;
+}
+
+.right {
+    width: 15px;
+    right: 0;
+    top: 150px;
+    height: 100px;
+}
