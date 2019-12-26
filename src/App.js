@@ -13,26 +13,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth.js";
 import setAuthToken from "./utils/setAuthToken";
-let onLogin = () => {
-	alert("login clicked");
-};
-let onSignup = () => {
-	alert("sign up clicked");
-};
-
-let onFacebookLogin = () => {
-	alert("facebook login clicked");
-};
-let onFacebookSignup = () => {
-	alert("facebook sign up clicked");
-};
-
-let onGoogleLogin = () => {
-	alert("google login clicked");
-};
-let onGoogleSignup = () => {
-	alert("google sign up clicked");
-};
 
 if (localStorage.token) {
 	setAuthToken(localStorage.token);
