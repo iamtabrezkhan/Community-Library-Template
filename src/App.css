@@ -1,6 +1,7 @@
 :root {
     font-size: 16px;
     --color-dark-gray: #464646;
+    --color-light-gray: #888888;
     --color-blue: #4084b4;
     --color-light-purple: #C39BD3;
 }
@@ -12,4 +13,20 @@
 
 .content {
     height: calc(100% - 4rem);
+}
+
+@media only screen and (max-width: 768px) {
+
+    :root {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    :root {
+        font-size: 14px;
+    }
+
 }

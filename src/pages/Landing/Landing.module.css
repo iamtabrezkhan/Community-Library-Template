@@ -1,0 +1,65 @@
+.main {
+    width: 100%;
+}
+
+.communitiesNearYou {
+    width: calc(100% - 60px);
+    max-width: 1024px;
+    padding: 40px 30px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.communitiesNearYou .title {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--color-dark-gray);
+    padding-bottom: 10px;
+}
+
+.communitiesNearYou .subTitle {
+    font-size: 1rem;
+    color: var(--color-dark-gray);
+    padding-bottom: 10px;
+}
+
+.communitiesNearYou .cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.communitiesNearYou .cardContainer {
+    width: calc(33.33% - 10px);
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .communitiesNearYou {
+        width: calc(100% - 30px);
+        padding: 20px 15px;
+    }
+
+    .communitiesNearYou .cardContainer {
+        width: calc(50% - 10px);
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .communitiesNearYou {
+        width: calc(100% - 30px);
+        padding: 20px 15px;
+    }
+
+    .communitiesNearYou .cardContainer {
+        width: calc(100% - 0px);
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+}
